@@ -38,14 +38,17 @@ mygpt/
 - **models/gpt.py**  
   包含 `GPT`, `Block`, `MultiHeadAttention`, `FeedForward` 等模块化实现。
 
-  - **models/attention.py**  
+- **models/attention.py**  
   包含 `SingleHeadAttention`, `MultiHeadAttention`等模块化实现。
 
-  - **models/block.py**  
+- **models/block.py**  
   包含 `FeedForward`, `Block`等模块化实现。
 
 - **models/dataset.py**  
   包含 `MyDataset` 类：负责加载 JSONL 文本、编码、切分为训练样本。
+
+- **data/mobvoi_seq_monkey_general_open_corpus.jsonly**  
+  包含训练数据
 
 - **scripts/train.py**  
   训练流程入口：加载数据、初始化模型 & 优化器 & 学习率调度器、执行训练 & 验证并保存 checkpoint。
@@ -56,6 +59,29 @@ mygpt/
 - **checkpoints/**  
   存放训练过程中保存的 `.pt` 文件。
 
+训练示例
+```bash
+python scripts/train.py \
+  --data_path    data/mobvoi_seq_monkey_general_open_corpus.jsonl \
+  --block_size   512 \
+  --batch_size   12 \
+  --n_layer      6 \
+  --n_head       12 \
+  --n_embd       768 \
+  --max_steps    1000 \
+  --lr           3e-4 \
+  --out_dir      checkpoints/
+
+```
+
+对话示例
+```bash
+python scripts/chat.py \
+  --checkpoint     checkpoints/model_step_1000.pt \
+  --block_size     512 \
+  --max_new_tokens 50
+
+```
 
 
 

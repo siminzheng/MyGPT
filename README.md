@@ -3,6 +3,18 @@
 A pure PyTorch, from-scratch GPT tutorial project (no external large-model libraries), including the model, data processing, training scripts, and dialogue inference examples.
 
 
+```text
+                 _______           _______  _______ _________
+                (       )|\     /|(  ____ \(  ____ )\__   __/
+                | () () |( \   / )| (    \/| (    )|   ) (   
+                | || || | \ (_) / | |      | (____)|   | |   
+                | |(_)| |  \   /  | | ____ |  _____)   | |   
+                | |   | |   ) (   | | \_  )| (         | |   
+                | )   ( |   | |   | (___) || )         | |   
+                |/     \|   \_/   (_______)|/          )_(   
+ ```                         
+
+
 安装依赖
 ```bash
 pip install -r requirements.txt

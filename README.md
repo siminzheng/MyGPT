@@ -1,6 +1,6 @@
 # MyGPT
-一个纯 PyTorch（无外部大模型库）手写版 GPT 教学项目，包含模型、数据处理、训练脚本和对话推理示例。
-A pure PyTorch, from-scratch GPT tutorial project (no external large-model libraries), including the model, data processing, training scripts, and dialogue inference examples.
+一个纯 PyTorch（无外部大模型库）手写版 GPT 项目，包含模型、数据处理、训练脚本和对话推理示例。
+A pure PyTorch, from-scratch GPT project (no external large-model libraries), including the model, data processing, training scripts, and dialogue inference examples.
 
 
 ```text
